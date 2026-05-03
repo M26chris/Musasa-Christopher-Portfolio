@@ -13,6 +13,9 @@ staticfiles/
 # Environment
 .env
 
+logs/
+*.log
+
 # Windows
 Thumbs.db
 desktop.ini
