@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+
+{% block title %}Services | Christopher Musasa{% endblock %}
+
+{% block content %}
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+        <p class="text-blue-300 uppercase tracking-widest text-sm font-semibold mb-3">What I Offer</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Services</h1>
+        <p class="text-blue-100 text-lg">
+            Professional web development, data analytics, cybersecurity consulting,
+            and health tech solutions — all in one place.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===================== SERVICES GRID ===================== -->
+<section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Service 1: Web Design & Development -->
+            <div class="bg-white border border-blue-100 rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+                <div class="bg-blue-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-3">Web Design & Development</h3>
+                <p class="text-gray-600 mb-5">
+                    I design and build clean, fast, professional websites tailored to your brand and goals.
+                    From personal portfolios to business sites and web applications — built with
+                    Python, Django, and Tailwind CSS.
+                </p>
+                <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Custom website design & development</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Django web applications</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Responsive mobile-friendly layouts</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Blog & CMS integration</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Website maintenance & updates</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Deployment & hosting setup</li>
+                </ul>
+                <div class="flex items-center justify-between">
+                    <span class="text-blue-700 font-bold text-lg">Starting from $50</span>
+                    <a href="/contact/" class="bg-blue-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-blue-700 transition">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 2: Data Analysis & Reporting -->
+            <div class="bg-white border border-blue-100 rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+                <div class="bg-green-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-3">Data Analysis & Reporting</h3>
+                <p class="text-gray-600 mb-5">
+                    I turn complex, messy datasets into clear, actionable insights.
+                    With experience in healthcare data management and community health
+                    screening programmes, I bring both technical skill and domain knowledge.
+                </p>
+                <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Data cleaning & validation</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Excel & Python-based analysis</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Dashboard & report creation</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Healthcare & lab data management</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> SQL database queries</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Data visualisation (charts & graphs)</li>
+                </ul>
+                <div class="flex items-center justify-between">
+                    <span class="text-green-700 font-bold text-lg">Starting from $30</span>
+                    <a href="/contact/" class="bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-green-700 transition">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 3: Cybersecurity Consulting -->
+            <div class="bg-white border border-blue-100 rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+                <div class="bg-orange-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fas fa-shield-alt text-orange-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-3">Cybersecurity Consulting</h3>
+                <p class="text-gray-600 mb-5">
+                    With certifications from Cisco Networking Academy and ISC2 (in progress),
+                    I help individuals and small organisations secure their digital systems,
+                    especially those handling sensitive patient or client data.
+                </p>
+                <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Basic security audits</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Patient data privacy compliance</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Secure data handling practices</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Staff cybersecurity awareness training</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> EHR system security review</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Cyber threat assessment</li>
+                </ul>
+                <div class="flex items-center justify-between">
+                    <span class="text-orange-600 font-bold text-lg">Starting from $40</span>
+                    <a href="/contact/" class="bg-orange-500 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service 4: Health Tech Solutions -->
+            <div class="bg-white border border-blue-100 rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+                <div class="bg-red-100 w-14 h-14 rounded-2xl flex items-center justify-center mb-5">
+                    <i class="fas fa-heartbeat text-red-500 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-blue-900 mb-3">Health Tech Solutions</h3>
+                <p class="text-gray-600 mb-5">
+                    A unique service combining my medical laboratory expertise with software development.
+                    I build custom digital tools specifically for clinics, hospitals, labs,
+                    and health NGOs operating in Uganda and East Africa.
+                </p>
+                <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Lab management systems</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Patient record systems</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Health data dashboards</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Community health data tools</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Diagnostic data systems</li>
+                    <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> EHR consultation & setup</li>
+                </ul>
+                <div class="flex items-center justify-between">
+                    <span class="text-red-600 font-bold text-lg">Starting from $80</span>
+                    <a href="/contact/" class="bg-red-500 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-red-600 transition">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== PROCESS SECTION ===================== -->
+<section class="bg-blue-50 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <p class="text-blue-600 font-semibold uppercase tracking-widest text-sm mb-2">How I Work</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900">My Process</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-md transition">
+                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-blue-700 font-extrabold text-xl">1</span>
+                </div>
+                <h4 class="font-bold text-blue-900 mb-2">Discovery</h4>
+                <p class="text-gray-500 text-sm">We talk about your needs, goals, and timeline. I ask the right questions to understand exactly what you need.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-md transition">
+                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-blue-700 font-extrabold text-xl">2</span>
+                </div>
+                <h4 class="font-bold text-blue-900 mb-2">Planning</h4>
+                <p class="text-gray-500 text-sm">I put together a clear plan, timeline, and quote. No hidden fees — everything is transparent upfront.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-md transition">
+                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-blue-700 font-extrabold text-xl">3</span>
+                </div>
+                <h4 class="font-bold text-blue-900 mb-2">Execution</h4>
+                <p class="text-gray-500 text-sm">I build and deliver with precision. You get regular updates and can give feedback throughout the process.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow p-6 text-center hover:shadow-md transition">
+                <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span class="text-blue-700 font-extrabold text-xl">4</span>
+                </div>
+                <h4 class="font-bold text-blue-900 mb-2">Delivery</h4>
+                <p class="text-gray-500 text-sm">Final product delivered on time. I offer post-delivery support to make sure everything runs smoothly.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===================== CTA ===================== -->
+<section class="bg-blue-600 py-16 px-6 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Not Sure What You Need?</h2>
+        <p class="text-blue-100 text-lg mb-8">
+            Send me a message and we'll figure it out together.
+            First consultation is always free.
+        </p>
+        <a href="/contact/" class="bg-white text-blue-700 font-bold px-10 py-3 rounded-full hover:bg-blue-50 transition">
+            Let's Talk
+        </a>
+    </div>
+</section>
+
+{% endblock %}

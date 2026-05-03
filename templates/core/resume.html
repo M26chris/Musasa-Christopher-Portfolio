@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Resume | Christopher Musasa{% endblock %}
+
+{% block content %}
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+        <p class="text-blue-300 uppercase tracking-widest text-sm font-semibold mb-3">My Credentials</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Resume / CV</h1>
+        <p class="text-blue-100 text-lg mb-8">
+            A full overview of my professional experience, education, and certifications.
+        </p>
+        <a href="{% static 'files/Christopher_Musasa_CV.pdf' %}"
+           download
+           class="inline-flex items-center gap-3 bg-white text-blue-700 font-bold px-8 py-3 rounded-full hover:bg-blue-50 transition">
+            <i class="fas fa-download"></i> Download PDF CV
+        </a>
+    </div>
+</section>
+
+
+<!-- ===================== RESUME BODY ===================== -->
+<section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+
+        <!-- Top Card: Summary -->
+        <div class="bg-white rounded-2xl shadow-md p-8 mb-10 flex flex-col md:flex-row gap-8 items-start">
+            <div class="flex-shrink-0 flex flex-col items-center gap-3">
+                <div class="w-28 h-28 rounded-full bg-blue-100 border-4 border-blue-400 flex items-center justify-center overflow-hidden">
+                    <i class="fas fa-user text-blue-400 text-5xl"></i>
+                </div>
+                <p class="font-bold text-blue-900 text-lg text-center">Christopher Musasa</p>
+                <span class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">
+                    Available for Work
+                </span>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-2xl font-extrabold text-blue-900 mb-1">Professional Summary</h2>
+                <p class="text-gray-400 text-sm mb-4">Reg. No: AHPC2026678445 · Kampala, Uganda</p>
+                <p class="text-gray-600 leading-relaxed">
+                    Dedicated Medical Laboratory Technician registered with AHPC with a Diploma in Medical
+                    Laboratory Technology and over three years of hands-on laboratory experience across
+                    haematology, clinical chemistry, microbiology, blood banking, phlebotomy, and urinalysis
+                    in six healthcare facilities in Kampala. Consistently achieving 99.7% accuracy in
+                    diagnostic reporting. Also skilled in Data Science, Cybersecurity, and Web Development —
+                    building precision-driven digital solutions for healthcare and beyond.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-5 text-sm text-gray-500">
+                    <span><i class="fas fa-envelope text-blue-500 mr-1"></i>musasachristopher2@gmail.com</span>
+                    <span><i class="fas fa-phone text-blue-500 mr-1"></i>+256 755 281 260</span>
+                    <span><i class="fas fa-map-marker-alt text-blue-500 mr-1"></i>Naguru, Kampala</span>
+                    <a href="https://github.com/M26chris" target="_blank"
+                       class="text-blue-600 hover:underline">
+                        <i class="fab fa-github mr-1"></i>github.com/M26chris
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- LEFT COLUMN -->
+            <div class="lg:col-span-1 space-y-8">
+
+
+                <!-- Core Competencies -->
+                <div class="bg-white rounded-2xl shadow p-6">
+                    <h3 class="text-lg font-extrabold text-blue-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-star text-blue-500"></i> Core Competencies
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Phlebotomy</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Haematology</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Blood Banking</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Microbiology</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Clinical Chemistry</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Immunohaematology</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">EHR Systems</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Quality Control</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">SQL</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Data Analysis</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Excel & Access</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Cybersecurity</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">Flutter / Dart</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">R Language</span>
+                    </div>
+                </div>
+
+
+                <!-- Education -->
+                <div class="bg-white rounded-2xl shadow p-6">
+                    <h3 class="text-lg font-extrabold text-blue-900 mb-5 flex items-center gap-2">
+                        <i class="fas fa-graduation-cap text-blue-500"></i> Education
+                    </h3>
+                    <div class="space-y-5">
+
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <p class="font-bold text-blue-900 text-sm">Diploma in Medical Laboratory Technology</p>
+                            <p class="text-gray-500 text-xs">Nsambya Medical Laboratory Training School</p>
+                            <p class="text-blue-600 text-xs font-semibold mt-1">2021 · CGPA: 3.87</p>
+                        </div>
+
+                        <div class="border-l-4 border-green-400 pl-4">
+                            <p class="font-bold text-blue-900 text-sm">Uganda Advanced Certificate of Education</p>
+                            <p class="text-gray-500 text-xs">Kyambogo College School, Kampala</p>
+                            <p class="text-blue-600 text-xs font-semibold mt-1">2015</p>
+                        </div>
+
+                        <div class="border-l-4 border-orange-400 pl-4">
+                            <p class="font-bold text-blue-900 text-sm">Uganda Certificate of Education</p>
+                            <p class="text-gray-500 text-xs">St. Joseph's College Layibi, Gulu</p>
+                            <p class="text-blue-600 text-xs font-semibold mt-1">2013 · Division I</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="bg-white rounded-2xl shadow p-6">
+                    <h3 class="text-lg font-extrabold text-blue-900 mb-5 flex items-center gap-2">
+                        <i class="fas fa-certificate text-blue-500"></i> Certifications
+                    </h3>
+                    <div class="space-y-4">
+
+                        <div class="flex items-start gap-3">
+                            <div class="bg-blue-100 p-2 rounded-lg flex-shrink-0">
+                                <i class="fas fa-syringe text-blue-600 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">BD Phlebotomy Training</p>
+                                <p class="text-gray-400 text-xs">Becton, Dickinson & Co. · 2018</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="bg-purple-100 p-2 rounded-lg flex-shrink-0">
+                                <i class="fab fa-python text-purple-600 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">Intermediate Python for Data Science</p>
+                                <p class="text-gray-400 text-xs">DataQuest · 2019</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="bg-green-100 p-2 rounded-lg flex-shrink-0">
+                                <i class="fas fa-chart-pie text-green-600 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">Data Science & Analytics Bootcamp</p>
+                                <p class="text-gray-400 text-xs">DataMites / IABAC · 2023</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="bg-orange-100 p-2 rounded-lg flex-shrink-0">
+                                <i class="fas fa-shield-alt text-orange-500 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">Introduction to Cybersecurity</p>
+                                <p class="text-gray-400 text-xs">Cisco Networking Academy · 2024</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 bg-yellow-50 rounded-xl p-2">
+                            <div class="bg-yellow-100 p-2 rounded-lg flex-shrink-0">
+                                <i class="fas fa-lock text-yellow-600 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">ISC2 Certified in Cybersecurity</p>
+                                <p class="text-yellow-600 text-xs font-semibold">⏳ In Progress</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 bg-yellow-50 rounded-xl p-2">
+                            <div class="bg-yellow-100 p-2 rounded-lg flex-shrink-0">
+                                <i class="fas fa-chart-bar text-yellow-600 text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 text-sm">Data Analytics Essentials</p>
+                                <p class="text-yellow-600 text-xs font-semibold">⏳ In Progress · Cisco</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="bg-white rounded-2xl shadow p-6">
+                    <h3 class="text-lg font-extrabold text-blue-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-language text-blue-500"></i> Languages
+                    </h3>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-gray-700">English</span>
+                                <span class="text-gray-400">Proficient</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width:90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-gray-700">Luganda</span>
+                                <span class="text-gray-400">Excellent</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width:95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="font-semibold text-gray-700">Acholi</span>
+                                <span class="text-gray-400">Native</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2">
+                                <div class="bg-blue-600 h-2 rounded-full" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN: Experience -->
+            <div class="lg:col-span-2 space-y-8">
+
+                <!-- Professional Experience -->
+                <div class="bg-white rounded-2xl shadow p-6">
+                    <h3 class="text-lg font-extrabold text-blue-900 mb-6 flex items-center gap-2">
+                        <i class="fas fa-briefcase text-blue-500"></i> Professional Experience
+                    </h3>
+
+                    <div class="relative border-l-4 border-blue-100 ml-2 space-y-8">
+
+                        <!-- Job 1 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-3 top-1 w-5 h-5 bg-blue-600 rounded-full border-4 border-white shadow"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                                <h4 class="font-bold text-blue-900">Laboratory Technician</h4>
+                                <span class="text-blue-600 text-xs font-semibold bg-blue-50 px-2 py-1 rounded-full mt-1 sm:mt-0 whitespace-nowrap">
+                                    Dec 2023 – Present
+                                </span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-2">Essential Communications LTD · Ntinda, Kampala</p>
+                            <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                                <li>Routine lab tests on blood, urine & swabs for travel health certifications</li>
+                                <li>High-volume data entry with 99.7% accuracy using Excel & Access</li>
+                                <li>Cybersecurity principles applied to confidential patient data handling</li>
+                            </ul>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-3 top-1 w-5 h-5 bg-blue-500 rounded-full border-4 border-white shadow"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                                <h4 class="font-bold text-blue-900">Laboratory Technician (Part-Time)</h4>
+                                <span class="text-blue-600 text-xs font-semibold bg-blue-50 px-2 py-1 rounded-full mt-1 sm:mt-0 whitespace-nowrap">
+                                    Current
+                                </span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-2">Lanta Medical Centre · Kiteezi, Kampala</p>
+                            <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                                <li>Sample collection, preparation, and diagnostic testing</li>
+                                <li>Accurate patient records and lab reports maintenance</li>
+                            </ul>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-3 top-1 w-5 h-5 bg-green-500 rounded-full border-4 border-white shadow"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                                <h4 class="font-bold text-blue-900">Data Analyst</h4>
+                                <span class="text-green-600 text-xs font-semibold bg-green-50 px-2 py-1 rounded-full mt-1 sm:mt-0 whitespace-nowrap">
+                                    Jun – Dec 2023
+                                </span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-2">Naguru Community Health Project · Kampala</p>
+                            <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                                <li>Designed data systems for community health screening programmes</li>
+                                <li>Improved dataset accuracy by 30% through structured validation</li>
+                                <li>Mentored field workers on data interpretation & secure management</li>
+                            </ul>
+                        </div>
+
+                        <!-- Job 4 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-3 top-1 w-5 h-5 bg-purple-500 rounded-full border-4 border-white shadow"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                                <h4 class="font-bold text-blue-900">Technical Support Specialist (Freelance)</h4>
+                                <span class="text-purple-600 text-xs font-semibold bg-purple-50 px-2 py-1 rounded-full mt-1 sm:mt-0 whitespace-nowrap">
+                                    2023 – 2025
+                                </span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-2">Remote</p>
+                            <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                                <li>Technical support for database and system issues</li>
+                                <li>Applied cybersecurity principles in troubleshooting</li>
+                            </ul>
+                        </div>
+
+                        <!-- Job 5 -->
+                        <div class="relative pl-6">
+                            <div class="absolute -left-3 top-1 w-5 h-5 bg-blue-400 rounded-full border-4 border-white shadow"></div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-1">
+                                <h4 class="font-bold text-blue-900">Laboratory Technician</h4>
+                                <span class="text-blue-600 text-xs font-semibold bg-blue-50 px-2 py-1 rounded-full mt-1 sm:mt-0 whitespace-nowrap">
+                                    2021 – 2022
+                                </span>
+                            </div>
+                            <p class="text-gray-500 text-sm mb-2">Glory of Christ Medical Centre · Kawaala, Kampala</p>
+                            <ul class="text-gray-600 text-sm space-y-1 list-disc list-inside">
+                                <li>Diagnostics in haematology, microbiology, and clinical chemistry</li>
+                                <li>Maintained 99.7% accuracy in test results and documentation</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Technical Project -->
+                <div class="bg-white rounded-2xl shadow p-6">
+                    <h3 class="text-lg font-extrabold text-blue-900 mb-5 flex items-center gap-2">
+                        <i class="fas fa-laptop-code text-blue-500"></i> Technical Project
+                    </h3>
+                    <div class="bg-blue-50 rounded-xl p-5">
+                        <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+                            <h4 class="font-bold text-blue-900">CBC Analyser — Diagnostic Data System</h4>
+                            <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">Ongoing</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Designing a CBC Analyser application for small and medium-sized Ugandan clinics
+                            using Python, R, Go, and SQLite. Features a machine learning model to generate
+                            Uganda-specific haematological reference ranges, replacing reliance on generic
+                            Western reference values.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-white text-blue-700 border border-blue-200 text-xs px-2 py-1 rounded-full">Python</span>
+                            <span class="bg-white text-blue-700 border border-blue-200 text-xs px-2 py-1 rounded-full">R</span>
+                            <span class="bg-white text-blue-700 border border-blue-200 text-xs px-2 py-1 rounded-full">Go</span>
+                            <span class="bg-white text-blue-700 border border-blue-200 text-xs px-2 py-1 rounded-full">SQLite</span>
+                            <span class="bg-white text-blue-700 border border-blue-200 text-xs px-2 py-1 rounded-full">Machine Learning</span>
+                            <span class="bg-white text-blue-700 border border-blue-200 text-xs px-2 py-1 rounded-full">Health Tech</span>
+                        </div>
+                        <a href="https://github.com/M26chris" target="_blank"
+                           class="inline-flex items-center gap-2 mt-4 text-blue-600 text-sm font-semibold hover:underline">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Volunteer & Internship -->
+                <div class="bg-white rounded-2xl shadow p-6">
+                    <h3 class="text-lg font-extrabold text-blue-900 mb-5 flex items-center gap-2">
+                        <i class="fas fa-hands-helping text-blue-500"></i> Volunteer & Internship
+                    </h3>
+                    <div class="space-y-4 text-sm text-gray-600">
+
+                        <div class="border-l-4 border-blue-300 pl-4">
+                            <p class="font-bold text-blue-900">Volunteer Lab Technician</p>
+                            <p class="text-gray-500 text-xs">Kyambogo University Medical Centre · 2018 – 2021</p>
+                            <p class="mt-1">Assisted in sample analysis, quality control, and health records management.</p>
+                        </div>
+
+                        <div class="border-l-4 border-blue-300 pl-4">
+                            <p class="font-bold text-blue-900">Lab Technician Intern</p>
+                            <p class="text-gray-500 text-xs">St. Francis Hospital Nsambya · During Diploma Training</p>
+                            <p class="mt-1">Routine diagnostics in haematology, microbiology & clinical chemistry.</p>
+                        </div>
+
+                        <div class="border-l-4 border-blue-300 pl-4">
+                            <p class="font-bold text-blue-900">Lab Technician Intern</p>
+                            <p class="text-gray-500 text-xs">Gombe General Hospital · 1 Month Attachment</p>
+                            <p class="mt-1">Diagnostic tests, staining procedures, microscopic examination & QC.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Download CTA -->
+        <div class="mt-12 text-center">
+            <p class="text-gray-500 mb-4">Want the full CV with all details?</p>
+            <a href="{% static 'files/Christopher_Musasa_CV.pdf' %}"
+               download
+               class="inline-flex items-center gap-3 bg-blue-600 text-white font-bold px-10 py-4 rounded-full hover:bg-blue-700 transition text-lg">
+                <i class="fas fa-download"></i> Download Full CV (PDF)
+            </a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

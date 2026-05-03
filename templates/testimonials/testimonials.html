@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}Testimonials | Christopher Musasa{% endblock %}
+
+{% block content %}
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+        <p class="text-blue-300 uppercase tracking-widest text-sm font-semibold mb-3">What People Say</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Testimonials</h1>
+        <p class="text-blue-100 text-lg">
+            Feedback from colleagues, clients, and supervisors I've worked with.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===================== TESTIMONIALS GRID ===================== -->
+<section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+
+        {% if testimonials %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for t in testimonials %}
+            <div class="bg-white rounded-2xl shadow-md p-7 hover:shadow-xl transition flex flex-col justify-between">
+
+                <!-- Stars -->
+                <div>
+                    <div class="flex gap-1 mb-4">
+                        {% for i in "12345" %}
+                        <i class="fas fa-star {% if forloop.counter <= t.rating %}text-yellow-400{% else %}text-gray-200{% endif %} text-sm"></i>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Quote -->
+                    <i class="fas fa-quote-left text-blue-100 text-3xl mb-3"></i>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-5">
+                        {{ t.message }}
+                    </p>
+                </div>
+
+                <!-- Person -->
+                <div class="flex items-center gap-4 border-t pt-4 mt-2">
+                    {% if t.photo %}
+                    <img src="{{ t.photo.url }}" alt="{{ t.name }}"
+                         class="w-12 h-12 rounded-full object-cover border-2 border-blue-200"/>
+                    {% else %}
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-blue-400"></i>
+                    </div>
+                    {% endif %}
+                    <div>
+                        <p class="font-bold text-blue-900 text-sm">{{ t.name }}</p>
+                        <p class="text-gray-400 text-xs">{{ t.role }}</p>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        {% else %}
+        <!-- Empty State -->
+        <div class="text-center py-20">
+            <i class="fas fa-comments text-blue-200 text-6xl mb-4"></i>
+            <h3 class="text-xl font-bold text-gray-400 mb-2">No testimonials yet</h3>
+            <p class="text-gray-400 text-sm mb-6">
+                Testimonials from clients and colleagues will appear here soon.
+            </p>
+            <a href="/contact/"
+               class="inline-block bg-blue-600 text-white font-bold px-8 py-3 rounded-full hover:bg-blue-700 transition">
+                Work With Me
+            </a>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+
+<!-- ===================== LEAVE A REVIEW CTA ===================== -->
+<section class="bg-blue-600 py-16 px-6 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-extrabold mb-4">Worked With Me Before?</h2>
+        <p class="text-blue-100 text-lg mb-8">
+            I'd love to feature your feedback. Get in touch and I'll add your testimonial.
+        </p>
+        <a href="/contact/"
+           class="bg-white text-blue-700 font-bold px-10 py-3 rounded-full hover:bg-blue-50 transition">
+            Send Your Review
+        </a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog | Christopher Musasa{% endblock %}
+
+{% block content %}
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+        <p class="text-blue-300 uppercase tracking-widest text-sm font-semibold mb-3">Thoughts & Insights</p>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Blog</h1>
+        <p class="text-blue-100 text-lg">
+            Articles on healthcare, data science, cybersecurity, and technology in Uganda.
+        </p>
+    </div>
+</section>
+
+
+<!-- ===================== BLOG POSTS ===================== -->
+<section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+
+        {% if page_obj %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for post in page_obj %}
+            <article class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition group">
+
+                <!-- Cover Image -->
+                {% if post.cover_image %}
+                <img src="{{ post.cover_image.url }}" alt="{{ post.title }}"
+                     class="w-full h-48 object-cover group-hover:scale-105 transition duration-300"/>
+                {% else %}
+                <div class="w-full h-48 bg-gradient-to-br from-blue-600 to-blue-400 flex items-center justify-center">
+                    <i class="fas fa-pen-nib text-white text-4xl"></i>
+                </div>
+                {% endif %}
+
+                <div class="p-6">
+                    <!-- Category & Date -->
+                    <div class="flex items-center justify-between mb-3">
+                        {% if post.category %}
+                        <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">
+                            {{ post.category }}
+                        </span>
+                        {% endif %}
+                        <span class="text-gray-400 text-xs">
+                            {{ post.created_at|date:"M d, Y" }}
+                        </span>
+                    </div>
+
+                    <h2 class="text-lg font-bold text-blue-900 mb-2 group-hover:text-blue-600 transition">
+                        {{ post.title }}
+                    </h2>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                        {{ post.get_excerpt }}
+                    </p>
+
+                    <a href="{% url 'blog_detail' post.slug %}"
+                       class="text-blue-600 font-semibold text-sm hover:underline">
+                        Read More →
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+
+        </div>
+
+        <!-- Pagination -->
+        {% if page_obj.has_other_pages %}
+        <div class="flex justify-center items-center gap-2 mt-12">
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}"
+               class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition">
+                ← Prev
+            </a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+            <a href="?page={{ num }}"
+               class="px-4 py-2 rounded-full text-sm font-semibold transition
+               {% if page_obj.number == num %}bg-blue-600 text-white{% else %}bg-gray-100 text-gray-600 hover:bg-blue-50{% endif %}">
+                {{ num }}
+            </a>
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"
+               class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition">
+                Next →
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% else %}
+        <!-- Empty State -->
+        <div class="text-center py-20">
+            <i class="fas fa-pen-nib text-blue-200 text-6xl mb-4"></i>
+            <h3 class="text-xl font-bold text-gray-400 mb-2">No blog posts yet</h3>
+            <p class="text-gray-400 text-sm">Check back soon — articles are coming!</p>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+{% endblock %}

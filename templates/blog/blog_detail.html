@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} | Christopher Musasa{% endblock %}
+
+{% block content %}
+
+<!-- ===================== PAGE HERO ===================== -->
+<section class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 text-white py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+        <a href="/blog/" class="text-blue-300 text-sm hover:text-white mb-4 inline-block">
+            ← Back to Blog
+        </a>
+        {% if post.category %}
+        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-500 text-white mb-4 inline-block">
+            {{ post.category }}
+        </span>
+        {% endif %}
+        <h1 class="text-3xl md:text-5xl font-extrabold mt-3 mb-4">{{ post.title }}</h1>
+        <p class="text-blue-200 text-sm">
+            <i class="fas fa-calendar mr-2"></i>{{ post.created_at|date:"F d, Y" }}
+            &nbsp;·&nbsp;
+            <i class="fas fa-user mr-2"></i>Christopher Musasa
+        </p>
+    </div>
+</section>
+
+
+<!-- ===================== POST CONTENT ===================== -->
+<section class="py-20 px-6">
+    <div class="max-w-4xl mx-auto flex flex-col lg:flex-row gap-12">
+
+        <!-- Article -->
+        <article class="flex-1">
+            {% if post.cover_image %}
+            <img src="{{ post.cover_image.url }}" alt="{{ post.title }}"
+                 class="w-full rounded-2xl shadow-lg mb-8 object-cover max-h-96"/>
+            {% endif %}
+
+            <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed text-lg">
+                {{ post.body|linebreaks }}
+            </div>
+
+            <!-- Share -->
+            <div class="mt-12 border-t pt-8">
+                <p class="font-bold text-blue-900 mb-4">Share this article:</p>
+                <div class="flex gap-4">
+                    <a href="https://twitter.com/intent/tweet?text={{ post.title }}&url={{ request.build_absolute_uri }}"
+                       target="_blank"
+                       class="bg-sky-500 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-sky-600 transition">
+                        <i class="fab fa-twitter mr-2"></i>Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}"
+                       target="_blank"
+                       class="bg-blue-700 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-800 transition">
+                        <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="lg:w-64 flex-shrink-0 space-y-6">
+
+            <!-- Author Card -->
+            <div class="bg-blue-50 rounded-2xl p-6 text-center">
+                <div class="w-16 h-16 rounded-full bg-blue-200 flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-user text-blue-500 text-2xl"></i>
+                </div>
+                <h4 class="font-bold text-blue-900">Christopher Musasa</h4>
+                <p class="text-gray-500 text-xs mt-1">MLT · Data Analyst · Web Developer</p>
+                <a href="/about/" class="inline-block mt-3 text-blue-600 text-sm font-semibold hover:underline">
+                    View Profile →
+                </a>
+            </div>
+
+            <!-- CTA -->
+            <div class="bg-blue-600 rounded-2xl p-6 text-white text-center">
+                <h4 class="font-bold mb-2">Need a Website?</h4>
+                <p class="text-blue-100 text-sm mb-4">I build professional sites with Django & Tailwind.</p>
+                <a href="/contact/" class="bg-white text-blue-700 font-bold px-5 py-2 rounded-full text-sm hover:bg-blue-50 transition inline-block">
+                    Hire Me
+                </a>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Related Posts -->
+    {% if related %}
+    <div class="max-w-4xl mx-auto mt-16">
+        <h3 class="text-2xl font-extrabold text-blue-900 mb-8">Related Articles</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {% for rel in related %}
+            <a href="{% url 'blog_detail' rel.slug %}"
+               class="bg-white rounded-2xl shadow p-5 hover:shadow-md transition block">
+                {% if rel.category %}
+                <span class="text-xs font-semibold text-blue-600">{{ rel.category }}</span>
+                {% endif %}
+                <h4 class="font-bold text-blue-900 mt-2 mb-1">{{ rel.title }}</h4>
+                <p class="text-gray-500 text-sm">{{ rel.body|truncatewords:15 }}</p>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+</section>
+
+{% endblock %}
