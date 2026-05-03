@@ -98,6 +98,11 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 DEFAULT_FROM_EMAIL = 'musasachristopher2@gmail.com'
 CONTACT_EMAIL = 'musasachristopher2@gmail.com'
 
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://musasa-christopher-portfolio-production.up.railway.app',
+]
+
 # ── Logging ───────────────────────────────────────────────────────────────────
 LOGGING = {
     'version': 1,
