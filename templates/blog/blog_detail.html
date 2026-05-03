@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ post.title }} | Christopher Musasa{% endblock %}
+{% block meta_description %}{{ post.get_excerpt }}{% endblock %}
+{% block og_title %}{{ post.title }} | Christopher Musasa{% endblock %}
+{% block og_description %}{{ post.get_excerpt }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block canonical %}https://musasa-christopher-portfolio-production.up.railway.app/blog/{{ post.slug }}/{% endblock %}
 
 {% block content %}
 

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /summernote/
+
+Sitemap: https://musasa-christopher-portfolio-production.up.railway.app/sitemap.xml

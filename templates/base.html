@@ -4,10 +4,69 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>{% block title %}Christopher Musasa{% endblock %}</title>
+
+    <!-- ── Primary SEO ── -->
+    <title>{% block title %}Christopher Musasa | Medical Lab Technician & Tech Enthusiast{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Registered Medical Laboratory Technician, Data Analyst, and Tech Enthusiast based in Kampala, Uganda. Published Android app developer and health tech builder.{% endblock %}"/>
+    <meta name="keywords" content="{% block meta_keywords %}Christopher Musasa, Medical Laboratory Technician, Kampala Uganda, Data Analyst, Health Tech, Flutter Developer, CBC Analyser, Remindra{% endblock %}"/>
+    <meta name="author" content="Musasa Christopher"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="{% block canonical %}https://musasa-christopher-portfolio-production.up.railway.app{% endblock %}"/>
+
+    <!-- ── Open Graph (WhatsApp, LinkedIn, Facebook previews) ── -->
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}"/>
+    <meta property="og:title" content="{% block og_title %}Christopher Musasa | Medical Lab Technician & Tech Enthusiast{% endblock %}"/>
+    <meta property="og:description" content="{% block og_description %}Registered Medical Laboratory Technician, Data Analyst, and Tech Enthusiast based in Kampala, Uganda.{% endblock %}"/>
+    <meta property="og:url" content="{% block og_url %}https://musasa-christopher-portfolio-production.up.railway.app{% endblock %}"/>
+    <meta property="og:image" content="{% block og_image %}https://musasa-christopher-portfolio-production.up.railway.app/static/images/og-image.jpg{% endblock %}"/>
+    <meta property="og:site_name" content="Christopher Musasa Portfolio"/>
+    <meta property="og:locale" content="en_UG"/>
+
+    <!-- ── Twitter Card ── -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{% block twitter_title %}Christopher Musasa | Medical Lab Technician & Tech Enthusiast{% endblock %}"/>
+    <meta name="twitter:description" content="{% block twitter_description %}Registered Medical Laboratory Technician, Data Analyst, and Tech Enthusiast based in Kampala, Uganda.{% endblock %}"/>
+    <meta name="twitter:image" content="{% block twitter_image %}https://musasa-christopher-portfolio-production.up.railway.app/static/images/og-image.jpg{% endblock %}"/>
+
+    <!-- ── Structured Data (Schema.org) ── -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Musasa Christopher",
+        "jobTitle": "Medical Laboratory Technician",
+        "url": "https://musasa-christopher-portfolio-production.up.railway.app",
+        "email": "musasachristopher2@gmail.com",
+        "telephone": "+256755281260",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kampala",
+            "addressCountry": "UG"
+        },
+        "sameAs": [
+            "https://github.com/M26chris",
+            "https://remindra-bc8e5.web.app"
+        ],
+        "knowsAbout": [
+            "Medical Laboratory Technology",
+            "Data Analysis",
+            "Cybersecurity",
+            "Flutter Development",
+            "Python",
+            "Health Tech"
+        ]
+    }
+    </script>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"/>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Poppins', sans-serif; }
@@ -18,6 +77,7 @@
             overflow: hidden;
         }
     </style>
+
     {% block extra_css %}{% endblock %}
 </head>
 <body class="bg-white text-gray-800">
